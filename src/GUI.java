@@ -33,6 +33,7 @@ public class GUI implements ActionListener {
 	private Banshee banshee;
 	private Demon demon;
 	private Goryo goryo;
+	private Hantu hantu;
 	
 	public GUI() {
 	
@@ -115,6 +116,7 @@ public class GUI implements ActionListener {
 		banshee = new Banshee();
 		demon = new Demon();
 		goryo = new Goryo();
+		hantu = new Hantu();
 		
 		if(banshee.checkBanshee(first, second)== true) {
 		test.setText("Evidence left for Banshee is " + banshee.removeBanshee(first, second));
@@ -126,6 +128,10 @@ public class GUI implements ActionListener {
 		
 		else if(goryo.checkGoryo(first, second)== true) {
 			test.setText("Evidence left for Demon is " + goryo.removeGoryo(first, second));
+		}
+		
+		else if(hantu.checkHantu(first, second)== true) {
+			test.setText("Evidence left for Demon is " + hantu.removeHantu(first, second));
 		}
 		
 	}
