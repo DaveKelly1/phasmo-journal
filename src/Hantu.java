@@ -3,8 +3,8 @@ import java.util.List;
 
 public class Hantu {
 	private String one = "FINGERPRINTS";
-	private String two = "SPIRIT BOX";
-	private String three = "DOTS PROJECTOR";
+	private String two = "GHOST ORB";
+	private String three = "FREEZING TEMPERATURES";
 	private List<String> phantom1;
 	
 	public Hantu() {		
