@@ -53,6 +53,28 @@ public class GUI implements ActionListener {
 	private TheTwins theTwins;
 	
 	public GUI() {
+		
+	banshee = new Banshee();
+	demon = new Demon();
+	goryo = new Goryo();
+	phantom = new Phantom();
+	hantu = new Hantu();
+	jinn = new Jinn();
+	onryo = new Onryo();
+	poltergeist = new Poltergeist();
+	shade = new Shade();
+	spirit = new Spirit();
+	theMimic = new TheMimic();
+	yokai = new Yokai();
+	wraith = new Wraith();
+	yurei = new Yurei();
+	mare = new Mare();
+	myling = new Myling();
+	obake = new Obake();
+	oni = new Oni();
+	raiju = new Raiju();
+	revenant = new Revenant();
+	theTwins = new TheTwins();
 	
 	frame = new JFrame("Journal");
 	panel = new JPanel();
@@ -130,27 +152,7 @@ public class GUI implements ActionListener {
 		second = second.toUpperCase();
 		
 		conc.setText("The evidence so far is " + first + " and " + second);
-		banshee = new Banshee();
-		demon = new Demon();
-		goryo = new Goryo();
-		phantom = new Phantom();
-		hantu = new Hantu();
-		jinn = new Jinn();
-		onryo = new Onryo();
-		poltergeist = new Poltergeist();
-		shade = new Shade();
-		spirit = new Spirit();
-		theMimic = new TheMimic();
-		yokai = new Yokai();
-		wraith = new Wraith();
-		yurei = new Yurei();
-		mare = new Mare();
-		myling = new Myling();
-		obake = new Obake();
-		oni = new Oni();
-		raiju = new Raiju();
-		revenant = new Revenant();
-		theTwins = new TheTwins();
+		
 		
 		if(banshee.checkBanshee(first, second)== true) {
 		test.setText("Evidence left for Banshee is " + banshee.removeBanshee(first, second));
