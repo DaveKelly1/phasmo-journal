@@ -44,6 +44,13 @@ public class GUI implements ActionListener {
 	private Yokai yokai;
 	private Wraith wraith;
 	private Yurei yurei;
+	private Mare mare;
+	private Myling myling;
+	private Obake obake;
+	private Oni oni;
+	private Raiju raiju;
+	private Revenant revenant;
+	private TheTwins theTwins;
 	
 	public GUI() {
 	
@@ -137,19 +144,23 @@ public class GUI implements ActionListener {
 		yokai = new Yokai();
 		wraith = new Wraith();
 		yurei = new Yurei();
+		mare = new Mare();
+		myling = new Myling();
+		obake = new Obake();
+		oni = new Oni();
+		raiju = new Raiju();
+		revenant = new Revenant();
+		theTwins = new TheTwins();
 		
 		if(banshee.checkBanshee(first, second)== true) {
 		test.setText("Evidence left for Banshee is " + banshee.removeBanshee(first, second));
 		}
-		
 		else if(demon.checkDemon(first, second)== true) {
 			test.setText("Evidence left for Demon is " + demon.removeDemon(first, second));
 		}
-		
 		else if(goryo.checkGoryo(first, second)== true) {
 			test.setText("Evidence left for Goryo is " + goryo.removeGoryo(first, second));
 		}
-		
 		else if(hantu.checkHantu(first, second)== true) {
 			test.setText("Evidence left for Hantu is " + hantu.removeHantu(first, second));
 		}
@@ -182,6 +193,27 @@ public class GUI implements ActionListener {
 		}
 		else if(yurei.checkYurei(first, second)== true) {
 			test.setText("Evidence left for Yurei is " + yurei.removeYurei(first, second));
+		}
+		else if(mare.checkMare(first, second)== true) {
+			test.setText("Evidence left for Mare is " + mare.removeMare(first, second));
+		}
+		else if(mare.checkMare(first, second)== true) {
+			test.setText("Evidence left for Mare is " + mare.removeMare(first, second));
+		}
+		else if(mare.checkMare(first, second)== true) {
+			test.setText("Evidence left for Mare is " + mare.removeMare(first, second));
+		}
+		else if(mare.checkMare(first, second)== true) {
+			test.setText("Evidence left for Mare is " + mare.removeMare(first, second));
+		}
+		else if(mare.checkMare(first, second)== true) {
+			test.setText("Evidence left for Mare is " + mare.removeMare(first, second));
+		}
+		else if(mare.checkMare(first, second)== true) {
+			test.setText("Evidence left for Mare is " + mare.removeMare(first, second));
+		}
+		else if(mare.checkMare(first, second)== true) {
+			test.setText("Evidence left for Mare is " + mare.removeMare(first, second));
 		}
 		
 	}
