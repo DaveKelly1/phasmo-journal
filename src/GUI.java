@@ -36,6 +36,14 @@ public class GUI implements ActionListener {
 	private Jinn jinn;
 	private Hantu hantu;
 	private Phantom phantom;
+	private Onryo onryo;
+	private Poltergeist poltergeist;
+	private Shade shade;
+	private Spirit spirit;
+	private TheMimic theMimic;
+	private Yokai yokai;
+	private Wraith wraith;
+	private Yurei yurei;
 	
 	public GUI() {
 	
@@ -121,6 +129,14 @@ public class GUI implements ActionListener {
 		phantom = new Phantom();
 		hantu = new Hantu();
 		jinn = new Jinn();
+		onryo = new Onryo();
+		poltergeist = new Poltergeist();
+		shade = new Shade();
+		spirit = new Spirit();
+		theMimic = new TheMimic();
+		yokai = new Yokai();
+		wraith = new Wraith();
+		yurei = new Yurei();
 		
 		if(banshee.checkBanshee(first, second)== true) {
 		test.setText("Evidence left for Banshee is " + banshee.removeBanshee(first, second));
@@ -131,17 +147,41 @@ public class GUI implements ActionListener {
 		}
 		
 		else if(goryo.checkGoryo(first, second)== true) {
-			test.setText("Evidence left for Demon is " + goryo.removeGoryo(first, second));
+			test.setText("Evidence left for Goryo is " + goryo.removeGoryo(first, second));
 		}
 		
 		else if(hantu.checkHantu(first, second)== true) {
-			test.setText("Evidence left for Demon is " + hantu.removeHantu(first, second));
+			test.setText("Evidence left for Hantu is " + hantu.removeHantu(first, second));
 		}
 		else if(phantom.checkPhantom(first, second)== true) {
-			test.setText("Evidence left for Demon is " + phantom.removePhantom(first, second));
+			test.setText("Evidence left for Phantom is " + phantom.removePhantom(first, second));
 		}
 		else if(jinn.checkJinn(first, second)== true) {
-			test.setText("Evidence left for Demon is " + jinn.removeJinn(first, second));
+			test.setText("Evidence left for Jinn is " + jinn.removeJinn(first, second));
+		}
+		else if(onryo.checkOnryo(first, second)== true) {
+			test.setText("Evidence left for Onryo is " + onryo.removeOnryo(first, second));
+		}
+		else if(poltergeist.checkPoltergeist(first, second)== true) {
+			test.setText("Evidence left for Poltergeist is " + poltergeist.removePoltergeist(first, second));
+		}
+		else if(shade.checkShade(first, second)== true) {
+			test.setText("Evidence left for Shade is " + shade.removeShade(first, second));
+		}
+		else if(spirit.checkSpirit(first, second)== true) {
+			test.setText("Evidence left for Spirit is " + spirit.removeSpirit(first, second));
+		}
+		else if(theMimic.checkTheMimic(first, second)== true) {
+			test.setText("Evidence left for the Mimic is " + theMimic.removeTheMimic(first, second));
+		}
+		else if(yokai.checkYokai(first, second)== true) {
+			test.setText("Evidence left for Yokai is " + yokai.removeYokai(first, second));
+		}
+		else if(wraith.checkWraith(first, second)== true) {
+			test.setText("Evidence left for Wraith is " + wraith.removeWraith(first, second));
+		}
+		else if(yurei.checkYurei(first, second)== true) {
+			test.setText("Evidence left for Yurei is " + yurei.removeYurei(first, second));
 		}
 		
 	}
