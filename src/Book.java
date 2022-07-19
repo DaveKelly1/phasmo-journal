@@ -7,7 +7,7 @@ public class Book {
 	public static void main (String args []) {
 		new journal(null, null);
 		new GUI(); 
-		new scan();
+		
 		
 	}
 }
