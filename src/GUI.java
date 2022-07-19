@@ -21,7 +21,25 @@ public class GUI implements ActionListener {
 	private JButton bansheeButton;
 	private JButton goryoButton;
 	private JButton demonButton;
-	
+	private JButton jinnButton;
+	private JButton hantuButton;
+	private JButton phantomButton;
+	private JButton onryoButton;
+	private JButton poltergeistButton;
+	private JButton shadeButton;
+	private JButton spiritButton;
+	private JButton theMimicButton;
+	private JButton yokaiButton;
+	private JButton wraithButton;
+	private JButton yureiButton;
+	private JButton mareButton;
+	private JButton mylingButton;
+	private JButton obakeButton;
+	private JButton oniButton;
+	private JButton raijuButton;
+	private JButton revenantButton;
+	private JButton theTwinsButton;
+
 	private JTextField firstText;
 	private JTextField secondText;
 
@@ -94,7 +112,7 @@ public class GUI implements ActionListener {
 		firstText = new JTextField(" ");
 		firstText.setBounds(175, 20, 200, 25);
 		panel.add(firstText);
-		
+
 		//SECOND
 		//Second piece of evidence
 		secondEvidenceText = new JLabel("Second piece of evidence");
@@ -105,7 +123,7 @@ public class GUI implements ActionListener {
 		secondText = new JTextField(" ");
 		secondText.setBounds(175, 50, 200, 25);
 		panel.add(secondText);
-		
+
 		//Label for two pieces of evidence
 		conc = new JLabel("");
 		conc.setBounds(10, 110, 500, 25);
@@ -115,8 +133,25 @@ public class GUI implements ActionListener {
 		journalText = new JLabel("");
 		journalText.setBounds(10, 130, 500, 25);
 		panel.add(journalText);
-		
+
 		//BUTTONS
+
+		//Button for Demon
+		demonButton = new JButton("Demon");
+		demonButton.setBounds(10, 80, 75, 25);
+		panel.add(demonButton);
+		demonButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String first = firstText.getText();
+				String second = secondText.getText();	
+				first = first.trim();
+				second = second.trim();
+				first = first.toUpperCase();
+				second = second.toUpperCase();
+				demon.checkDemon(first, second);
+				journalText.setText("Evidence left for Demon is " + demon.removeDemon(first, second));
+			}
+		});
 
 		//Button for Banshee
 		bansheeButton = new JButton("Banshee");
@@ -151,23 +186,23 @@ public class GUI implements ActionListener {
 				journalText.setText("Evidence left for Goryo is " + goryo.removeGoryo(first, second));
 			}
 		});
-		
-		//Button for Demon
-				demonButton = new JButton("Demon");
-				demonButton.setBounds(10, 80, 75, 25);
-				panel.add(demonButton);
-				demonButton.addActionListener(new ActionListener() {
-					public void actionPerformed(ActionEvent e) {
-						String first = firstText.getText();
-						String second = secondText.getText();	
-						first = first.trim();
-						second = second.trim();
-						first = first.toUpperCase();
-						second = second.toUpperCase();
-						demon.checkDemon(first, second);
-						journalText.setText("Evidence left for Demon is " + demon.removeDemon(first, second));
-					}
-				});
+
+		//Button for Jinn
+		jinnButton = new JButton("Jinn");
+		jinnButton.setBounds(300, 80, 75, 25);
+		panel.add(jinnButton);
+		jinnButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String first = firstText.getText();
+				String second = secondText.getText();	
+				first = first.trim();
+				second = second.trim();
+				first = first.toUpperCase();
+				second = second.toUpperCase();
+				jinn.checkJinn(first, second);
+				journalText.setText("Evidence left for Jinn is " + jinn.removeJinn(first, second));
+			}
+		});
 
 		panel.setLayout(null);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
