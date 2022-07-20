@@ -203,6 +203,40 @@ public class GUI implements ActionListener {
 				journalText.setText("Evidence left for Jinn is " + jinn.removeJinn(first, second));
 			}
 		});
+		
+		//Button for Hantu
+				hantuButton = new JButton("Hantu");
+				hantuButton.setBounds(385, 80, 75, 25);
+				panel.add(hantuButton);
+				hantuButton.addActionListener(new ActionListener() {
+					public void actionPerformed(ActionEvent e) {
+						String first = firstText.getText();
+						String second = secondText.getText();	
+						first = first.trim();
+						second = second.trim();
+						first = first.toUpperCase();
+						second = second.toUpperCase();
+						hantu.checkHantu(first, second);
+						journalText.setText("Evidence left for Hantu is " + hantu.removeHantu(first, second));
+					}
+				});
+				
+				//Button for Phantom
+				phantomButton = new JButton("Phantom");
+				phantomButton.setBounds(470, 80, 90, 25);
+				panel.add(phantomButton);
+				phantomButton.addActionListener(new ActionListener() {
+					public void actionPerformed(ActionEvent e) {
+						String first = firstText.getText();
+						String second = secondText.getText();	
+						first = first.trim();
+						second = second.trim();
+						first = first.toUpperCase();
+						second = second.toUpperCase();
+						phantom.checkPhantom(first, second);
+						journalText.setText("Evidence left for Phantom is " + phantom.removePhantom(first, second));
+					}
+				});
 
 		panel.setLayout(null);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
