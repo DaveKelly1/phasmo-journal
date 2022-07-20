@@ -3,7 +3,7 @@ import java.util.List;
 
 public class Jinn {
 	private String one = "FINGERPRINTS";
-	private String two = "GHOST ORB";
+	private String two = "EMF LEVEL 5";
 	private String three = "FREEZING TEMPERATURES";
 	private List<String> jinn1;
 	
