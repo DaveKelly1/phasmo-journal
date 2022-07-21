@@ -356,146 +356,152 @@ public class GUI implements ActionListener {
 				journalText.setText("Evidence left for Wraith is " + wraith.removeWraith(first, second));
 			}
 		});
-		
+
 		//Button for Yurei
-				yureiButton = new JButton("Yurei");
-				yureiButton.setBounds(90, 160, 75, 25);
-				panel.add(yureiButton);
-				yureiButton.addActionListener(new ActionListener() {
-					public void actionPerformed(ActionEvent e) {
-						String first = firstText.getText();
-						String second = secondText.getText();	
-						first = first.trim();
-						second = second.trim();
-						first = first.toUpperCase();
-						second = second.toUpperCase();
-						yurei.checkYurei(first, second);
-						journalText.setText("Evidence left for Yurei is " + yurei.removeYurei(first, second));
-					}
-				});
-				
-				//Button for Mare
-				mareButton = new JButton("Mare");
-				mareButton.setBounds(170, 160, 75, 25);
-				panel.add(mareButton);
-				mareButton.addActionListener(new ActionListener() {
-					public void actionPerformed(ActionEvent e) {
-						String first = firstText.getText();
-						String second = secondText.getText();	
-						first = first.trim();
-						second = second.trim();
-						first = first.toUpperCase();
-						second = second.toUpperCase();
-						mare.checkMare(first, second);
-						journalText.setText("Evidence left for Mare is " + mare.removeMare(first, second));
-					}
-				});
-				
-				//Button for Myling
-				mylingButton = new JButton("Myling");
-				mylingButton.setBounds(250, 160, 75, 25);
-				panel.add(mylingButton);
-				mylingButton.addActionListener(new ActionListener() {
-					public void actionPerformed(ActionEvent e) {
-						String first = firstText.getText();
-						String second = secondText.getText();	
-						first = first.trim();
-						second = second.trim();
-						first = first.toUpperCase();
-						second = second.toUpperCase();
-						myling.checkMyling(first, second);
-						journalText.setText("Evidence left for Myling is " + myling.removeMyling(first, second));
-					}
-				});
-				
-				//Button for Obake
-				obakeButton = new JButton("Obake");
-				obakeButton.setBounds(330, 160, 75, 25);
-				panel.add(obakeButton);
-				obakeButton.addActionListener(new ActionListener() {
-					public void actionPerformed(ActionEvent e) {
-						String first = firstText.getText();
-						String second = secondText.getText();	
-						first = first.trim();
-						second = second.trim();
-						first = first.toUpperCase();
-						second = second.toUpperCase();
-						obake.checkObake(first, second);
-						journalText.setText("Evidence left for Obake is " + obake.removeObake(first, second));
-					}
-				});
-				
-				//Button for Oni
-				oniButton = new JButton("Oni");
-				oniButton.setBounds(410, 160, 75, 25);
-				panel.add(oniButton);
-				oniButton.addActionListener(new ActionListener() {
-					public void actionPerformed(ActionEvent e) {
-						String first = firstText.getText();
-						String second = secondText.getText();	
-						first = first.trim();
-						second = second.trim();
-						first = first.toUpperCase();
-						second = second.toUpperCase();
-						oni.checkOni(first, second);
-						journalText.setText("Evidence left for Oni is " + oni.removeOni(first, second));
-					}
-				});
-				
-				//Button for Raiju
-				raijuButton = new JButton("Raiju");
-				raijuButton.setBounds(490, 160, 75, 25);
-				panel.add(raijuButton);
-				raijuButton.addActionListener(new ActionListener() {
-					public void actionPerformed(ActionEvent e) {
-						String first = firstText.getText();
-						String second = secondText.getText();	
-						first = first.trim();
-						second = second.trim();
-						first = first.toUpperCase();
-						second = second.toUpperCase();
-						raiju.checkRaiju(first, second);
-						journalText.setText("Evidence left for Raiju is " + raiju.removeRaiju(first, second));
-					}
-				});
-				
-				//Button for Revenant
-				revenantButton = new JButton("Revenant");
-				revenantButton.setBounds(10, 200, 100, 25);
-				panel.add(revenantButton);
-				revenantButton.addActionListener(new ActionListener() {
-					public void actionPerformed(ActionEvent e) {
-						String first = firstText.getText();
-						String second = secondText.getText();	
-						first = first.trim();
-						second = second.trim();
-						first = first.toUpperCase();
-						second = second.toUpperCase();
-						revenant.checkRevenant(first, second);
-						journalText.setText("Evidence left for Revenant is " + revenant.removeRevenant(first, second));
-					}
-				});
-				
-				//Button for The Twins
-				theTwinsButton = new JButton("The Twins");
-				theTwinsButton.setBounds(115, 200, 100, 25);
-				panel.add(theTwinsButton);
-				theTwinsButton.addActionListener(new ActionListener() {
-					public void actionPerformed(ActionEvent e) {
-						String first = firstText.getText();
-						String second = secondText.getText();	
-						first = first.trim();
-						second = second.trim();
-						first = first.toUpperCase();
-						second = second.toUpperCase();
-						theTwins.checkTheTwins(first, second);
-						journalText.setText("Evidence left for The Twins is " + theTwins.removeTheTwins(first, second));
-					}
-				});
+		yureiButton = new JButton("Yurei");
+		yureiButton.setBounds(90, 160, 75, 25);
+		panel.add(yureiButton);
+		yureiButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String first = firstText.getText();
+				String second = secondText.getText();	
+				first = first.trim();
+				second = second.trim();
+				first = first.toUpperCase();
+				second = second.toUpperCase();
+				yurei.checkYurei(first, second);
+				journalText.setText("Evidence left for Yurei is " + yurei.removeYurei(first, second));
+			}
+		});
+
+		//Button for Mare
+		mareButton = new JButton("Mare");
+		mareButton.setBounds(170, 160, 75, 25);
+		panel.add(mareButton);
+		mareButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String first = firstText.getText();
+				String second = secondText.getText();	
+				first = first.trim();
+				second = second.trim();
+				first = first.toUpperCase();
+				second = second.toUpperCase();
+				mare.checkMare(first, second);
+				journalText.setText("Evidence left for Mare is " + mare.removeMare(first, second));
+			}
+		});
+
+		//Button for Myling
+		mylingButton = new JButton("Myling");
+		mylingButton.setBounds(250, 160, 75, 25);
+		panel.add(mylingButton);
+		mylingButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String first = firstText.getText();
+				String second = secondText.getText();	
+				first = first.trim();
+				second = second.trim();
+				first = first.toUpperCase();
+				second = second.toUpperCase();
+				myling.checkMyling(first, second);
+				journalText.setText("Evidence left for Myling is " + myling.removeMyling(first, second));
+			}
+		});
+
+		//Button for Obake
+		obakeButton = new JButton("Obake");
+		obakeButton.setBounds(330, 160, 75, 25);
+		panel.add(obakeButton);
+		obakeButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String first = firstText.getText();
+				String second = secondText.getText();	
+				first = first.trim();
+				second = second.trim();
+				first = first.toUpperCase();
+				second = second.toUpperCase();
+				obake.checkObake(first, second);
+				journalText.setText("Evidence left for Obake is " + obake.removeObake(first, second));
+			}
+		});
+
+		//Button for Oni
+		oniButton = new JButton("Oni");
+		oniButton.setBounds(410, 160, 75, 25);
+		panel.add(oniButton);
+		oniButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String first = firstText.getText();
+				String second = secondText.getText();	
+				first = first.trim();
+				second = second.trim();
+				first = first.toUpperCase();
+				second = second.toUpperCase();
+				oni.checkOni(first, second);
+				journalText.setText("Evidence left for Oni is " + oni.removeOni(first, second));
+			}
+		});
+
+		//Button for Raiju
+		raijuButton = new JButton("Raiju");
+		raijuButton.setBounds(490, 160, 75, 25);
+		panel.add(raijuButton);
+		raijuButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String first = firstText.getText();
+				String second = secondText.getText();	
+				first = first.trim();
+				second = second.trim();
+				first = first.toUpperCase();
+				second = second.toUpperCase();
+				raiju.checkRaiju(first, second);
+				journalText.setText("Evidence left for Raiju is " + raiju.removeRaiju(first, second));
+			}
+		});
+
+		//Button for Revenant
+		revenantButton = new JButton("Revenant");
+		revenantButton.setBounds(10, 200, 100, 25);
+		panel.add(revenantButton);
+		revenantButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String first = firstText.getText();
+				String second = secondText.getText();	
+				first = first.trim();
+				second = second.trim();
+				first = first.toUpperCase();
+				second = second.toUpperCase();
+				revenant.checkRevenant(first, second);
+				journalText.setText("Evidence left for Revenant is " + revenant.removeRevenant(first, second));
+			}
+		});
+
+		//Button for The Twins
+		theTwinsButton = new JButton("The Twins");
+		theTwinsButton.setBounds(115, 200, 100, 25);
+		panel.add(theTwinsButton);
+		theTwinsButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String first = firstText.getText();
+				String second = secondText.getText();	
+				first = first.trim();
+				second = second.trim();
+				first = first.toUpperCase();
+				second = second.toUpperCase();
+				theTwins.checkTheTwins(first, second);
+				journalText.setText("Evidence left for The Twins is " + theTwins.removeTheTwins(first, second));
+			}
+		});
 
 		panel.setLayout(null);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setVisible(true); 
+	}
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		// TODO Auto-generated method stub
+
 	}
 }
 
