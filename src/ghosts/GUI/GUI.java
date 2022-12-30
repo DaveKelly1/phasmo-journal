@@ -29,6 +29,7 @@ import ghosts.Revenant;
 import ghosts.Shade;
 import ghosts.Spirit;
 import ghosts.TheMimic;
+import ghosts.TheTwins;
 import ghosts.Wraith;
 import ghosts.Yokai;
 import ghosts.Yurei;
@@ -205,8 +206,8 @@ public class GUI implements ActionListener {
 				second = second.trim();
 				first = first.toUpperCase();
 				second = second.toUpperCase();
-				goryo.checkGoryo(first, second);
-				journalText.setText("Evidence left for Goryo is " + goryo.removeGoryo(first, second));
+				goryo.checkGhost(first, second);
+				journalText.setText("Evidence left for Goryo is " + goryo.removeGhost(first, second));
 			}
 		});
 
@@ -222,8 +223,8 @@ public class GUI implements ActionListener {
 				second = second.trim();
 				first = first.toUpperCase();
 				second = second.toUpperCase();
-				jinn.checkJinn(first, second);
-				journalText.setText("Evidence left for Jinn is " + jinn.removeJinn(first, second));
+				jinn.checkGhost(first, second);
+				journalText.setText("Evidence left for Jinn is " + jinn.removeGhost(first, second));
 			}
 		});
 
@@ -239,8 +240,8 @@ public class GUI implements ActionListener {
 				second = second.trim();
 				first = first.toUpperCase();
 				second = second.toUpperCase();
-				hantu.checkHantu(first, second);
-				journalText.setText("Evidence left for Hantu is " + hantu.removeHantu(first, second));
+				hantu.checkGhost(first, second);
+				journalText.setText("Evidence left for Hantu is " + hantu.removeGhost(first, second));
 			}
 		});
 
@@ -256,8 +257,8 @@ public class GUI implements ActionListener {
 				second = second.trim();
 				first = first.toUpperCase();
 				second = second.toUpperCase();
-				phantom.checkPhantom(first, second);
-				journalText.setText("Evidence left for Phantom is " + phantom.removePhantom(first, second));
+				phantom.checkGhost(first, second);
+				journalText.setText("Evidence left for Phantom is " + phantom.removeGhost(first, second));
 			}
 		});
 
@@ -273,8 +274,8 @@ public class GUI implements ActionListener {
 				second = second.trim();
 				first = first.toUpperCase();
 				second = second.toUpperCase();
-				onryo.checkOnryo(first, second);
-				journalText.setText("Evidence left for Onryo is " + onryo.removeOnryo(first, second));
+				onryo.checkGhost(first, second);
+				journalText.setText("Evidence left for Onryo is " + onryo.removeGhost(first, second));
 			}
 		});
 
@@ -290,8 +291,8 @@ public class GUI implements ActionListener {
 				second = second.trim();
 				first = first.toUpperCase();
 				second = second.toUpperCase();
-				poltergeist.checkPoltergeist(first, second);
-				journalText.setText("Evidence left for Poltergeist is " + poltergeist.removePoltergeist(first, second));
+				poltergeist.checkGhost(first, second);
+				journalText.setText("Evidence left for Poltergeist is " + poltergeist.removeGhost(first, second));
 			}
 		});
 
@@ -307,8 +308,8 @@ public class GUI implements ActionListener {
 				second = second.trim();
 				first = first.toUpperCase();
 				second = second.toUpperCase();
-				shade.checkShade(first, second);
-				journalText.setText("Evidence left for Shade is " + shade.removeShade(first, second));
+				shade.checkGhost(first, second);
+				journalText.setText("Evidence left for Shade is " + shade.removeGhost(first, second));
 			}
 		});
 
@@ -324,8 +325,8 @@ public class GUI implements ActionListener {
 				second = second.trim();
 				first = first.toUpperCase();
 				second = second.toUpperCase();
-				spirit.checkSpirit(first, second);
-				journalText.setText("Evidence left for Spirit is " + spirit.removeSpirit(first, second));
+				spirit.checkGhost(first, second);
+				journalText.setText("Evidence left for Spirit is " + spirit.removeGhost(first, second));
 			}
 		});
 
@@ -341,8 +342,8 @@ public class GUI implements ActionListener {
 				second = second.trim();
 				first = first.toUpperCase();
 				second = second.toUpperCase();
-				theMimic.checkTheMimic(first, second);
-				journalText.setText("Evidence left for The Mimic is " + theMimic.removeTheMimic(first, second));
+				theMimic.checkGhost(first, second);
+				journalText.setText("Evidence left for The Mimic is " + theMimic.removeGhost(first, second));
 			}
 		});
 
@@ -358,8 +359,8 @@ public class GUI implements ActionListener {
 				second = second.trim();
 				first = first.toUpperCase();
 				second = second.toUpperCase();
-				yokai.checkYokai(first, second);
-				journalText.setText("Evidence left for Yokai is " + yokai.removeYokai(first, second));
+				yokai.checkGhost(first, second);
+				journalText.setText("Evidence left for Yokai is " + yokai.removeGhost(first, second));
 			}
 		});
 
@@ -375,8 +376,8 @@ public class GUI implements ActionListener {
 				second = second.trim();
 				first = first.toUpperCase();
 				second = second.toUpperCase();
-				wraith.checkWraith(first, second);
-				journalText.setText("Evidence left for Wraith is " + wraith.removeWraith(first, second));
+				wraith.checkGhost(first, second);
+				journalText.setText("Evidence left for Wraith is " + wraith.removeGhost(first, second));
 			}
 		});
 
@@ -392,8 +393,8 @@ public class GUI implements ActionListener {
 				second = second.trim();
 				first = first.toUpperCase();
 				second = second.toUpperCase();
-				yurei.checkYurei(first, second);
-				journalText.setText("Evidence left for Yurei is " + yurei.removeYurei(first, second));
+				yurei.checkGhost(first, second);
+				journalText.setText("Evidence left for Yurei is " + yurei.removeGhost(first, second));
 			}
 		});
 
@@ -409,8 +410,8 @@ public class GUI implements ActionListener {
 				second = second.trim();
 				first = first.toUpperCase();
 				second = second.toUpperCase();
-				mare.checkMare(first, second);
-				journalText.setText("Evidence left for Mare is " + mare.removeMare(first, second));
+				mare.checkGhost(first, second);
+				journalText.setText("Evidence left for Mare is " + mare.removeGhost(first, second));
 			}
 		});
 
@@ -426,8 +427,8 @@ public class GUI implements ActionListener {
 				second = second.trim();
 				first = first.toUpperCase();
 				second = second.toUpperCase();
-				myling.checkMyling(first, second);
-				journalText.setText("Evidence left for Myling is " + myling.removeMyling(first, second));
+				myling.checkGhost(first, second);
+				journalText.setText("Evidence left for Myling is " + myling.removeGhost(first, second));
 			}
 		});
 
@@ -443,8 +444,8 @@ public class GUI implements ActionListener {
 				second = second.trim();
 				first = first.toUpperCase();
 				second = second.toUpperCase();
-				obake.checkObake(first, second);
-				journalText.setText("Evidence left for Obake is " + obake.removeObake(first, second));
+				obake.checkGhost(first, second);
+				journalText.setText("Evidence left for Obake is " + obake.removeGhost(first, second));
 			}
 		});
 
@@ -460,8 +461,8 @@ public class GUI implements ActionListener {
 				second = second.trim();
 				first = first.toUpperCase();
 				second = second.toUpperCase();
-				oni.checkOni(first, second);
-				journalText.setText("Evidence left for Oni is " + oni.removeOni(first, second));
+				oni.checkGhost(first, second);
+				journalText.setText("Evidence left for Oni is " + oni.removeGhost(first, second));
 			}
 		});
 
@@ -477,8 +478,8 @@ public class GUI implements ActionListener {
 				second = second.trim();
 				first = first.toUpperCase();
 				second = second.toUpperCase();
-				raiju.checkRaiju(first, second);
-				journalText.setText("Evidence left for Raiju is " + raiju.removeRaiju(first, second));
+				raiju.checkGhost(first, second);
+				journalText.setText("Evidence left for Raiju is " + raiju.removeGhost(first, second));
 			}
 		});
 
@@ -494,8 +495,8 @@ public class GUI implements ActionListener {
 				second = second.trim();
 				first = first.toUpperCase();
 				second = second.toUpperCase();
-				revenant.checkRevenant(first, second);
-				journalText.setText("Evidence left for Revenant is " + revenant.removeRevenant(first, second));
+				revenant.checkGhost(first, second);
+				journalText.setText("Evidence left for Revenant is " + revenant.removeGhost(first, second));
 			}
 		});
 
@@ -511,8 +512,8 @@ public class GUI implements ActionListener {
 				second = second.trim();
 				first = first.toUpperCase();
 				second = second.toUpperCase();
-				theTwins.checkTheTwins(first, second);
-				journalText.setText("Evidence left for The Twins is " + theTwins.removeTheTwins(first, second));
+				theTwins.checkGhost(first, second);
+				journalText.setText("Evidence left for The Twins is " + theTwins.removeGhost(first, second));
 			}
 		});
 

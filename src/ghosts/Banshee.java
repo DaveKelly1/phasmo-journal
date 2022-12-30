@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import ghosts.Interface.Ghost;
 
-class Banshee implements Ghost {
+public class Banshee implements Ghost {
 	private String evidenceOne = "fingerprints";
 	private String evidenceTwo = "ghost orb";
 	private String evidenceThree = "dots projector";
