@@ -18,7 +18,7 @@ public class Shade implements Ghost {
 		shade1.add(three);
 	}
 
-	public List<String> removeShade(String e1, String e2) {
+	public List<String> removeGhost(String e1, String e2) {
 		if (shade1.contains(e1)) {
 			shade1.remove(e1);
 		}
@@ -28,7 +28,7 @@ public class Shade implements Ghost {
 		return shade1;
 	}
 
-	public boolean checkShade(String e1, String e2) {
+	public boolean checkGhost(String e1, String e2) {
 		if (e1.equals(one) && (e2.equals(two)) || (e1.equals(two) && e2.equals(three))
 				|| e1.equals(three) && e2.equals(one)) {
 			return true;

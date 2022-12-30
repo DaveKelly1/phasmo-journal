@@ -18,7 +18,7 @@ public class Revenant implements Ghost {
 		revenant1.add(three);
 	}
 
-	public List<String> removeRevenant(String e1, String e2) {
+	public List<String> removeGhost(String e1, String e2) {
 		if (revenant1.contains(e1)) {
 			revenant1.remove(e1);
 		}
@@ -28,7 +28,7 @@ public class Revenant implements Ghost {
 		return revenant1;
 	}
 
-	public boolean checkRevenant(String e1, String e2) {
+	public boolean checkGhost(String e1, String e2) {
 		if (e1.equals(one) && (e2.equals(two)) || (e1.equals(two) && e2.equals(three))
 				|| e1.equals(three) && e2.equals(one)) {
 			return true;

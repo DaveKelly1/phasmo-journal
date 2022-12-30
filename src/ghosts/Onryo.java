@@ -18,7 +18,7 @@ public class Onryo implements Ghost {
 		onryo1.add(three);
 	}
 
-	public List<String> removeOnryo(String e1, String e2) {
+	public List<String> removeGhost(String e1, String e2) {
 		if (onryo1.contains(e1)) {
 			onryo1.remove(e1);
 		}
@@ -28,7 +28,7 @@ public class Onryo implements Ghost {
 		return onryo1;
 	}
 
-	public boolean checkOnryo(String e1, String e2) {
+	public boolean checkGhost(String e1, String e2) {
 		if (e1.equals(one) && (e2.equals(two)) || (e1.equals(two) && e2.equals(three))
 				|| e1.equals(three) && e2.equals(one)) {
 			return true;

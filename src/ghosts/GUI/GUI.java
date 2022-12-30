@@ -1,3 +1,5 @@
+package ghosts.GUI;
+
 import java.awt.BorderLayout;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
@@ -9,6 +11,27 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
+
+import ghosts.Banshee;
+import ghosts.Demon;
+import ghosts.Goryo;
+import ghosts.Hantu;
+import ghosts.Jinn;
+import ghosts.Mare;
+import ghosts.Myling;
+import ghosts.Obake;
+import ghosts.Oni;
+import ghosts.Onryo;
+import ghosts.Phantom;
+import ghosts.Poltergeist;
+import ghosts.Raiju;
+import ghosts.Revenant;
+import ghosts.Shade;
+import ghosts.Spirit;
+import ghosts.TheMimic;
+import ghosts.Wraith;
+import ghosts.Yokai;
+import ghosts.Yurei;
 
 public class GUI implements ActionListener {
 
@@ -46,7 +69,7 @@ public class GUI implements ActionListener {
 	private JFrame frame;
 	private JPanel panel;
 
-	//GHOSTS
+	// GHOSTS
 	private Banshee banshee;
 	private Demon demon;
 	private Goryo goryo;
@@ -95,89 +118,89 @@ public class GUI implements ActionListener {
 
 		frame = new JFrame("Journal");
 		panel = new JPanel();
-		frame.setSize(500,300);
+		frame.setSize(500, 300);
 		frame.add(panel);
 		frame.setTitle("Dave's Journal");
 
 		welcome = new JLabel("Welcome to my search list. Please type below the evidence you have found so far");
 		panel.add(welcome);
 
-		//FIRST
-		//First piece of evidence
+		// FIRST
+		// First piece of evidence
 		firstEvidenceText = new JLabel("First piece of evidence: ");
 		firstEvidenceText.setBounds(10, 20, 200, 25);
 		panel.add(firstEvidenceText);
 
-		//Text for first piece of evidence
+		// Text for first piece of evidence
 		firstText = new JTextField(" ");
 		firstText.setBounds(175, 20, 200, 25);
 		panel.add(firstText);
 
-		//SECOND
-		//Second piece of evidence
+		// SECOND
+		// Second piece of evidence
 		secondEvidenceText = new JLabel("Second piece of evidence");
 		secondEvidenceText.setBounds(10, 50, 200, 25);
 		panel.add(secondEvidenceText);
 
-		//Text for second piece of evidence
+		// Text for second piece of evidence
 		secondText = new JTextField(" ");
 		secondText.setBounds(175, 50, 200, 25);
 		panel.add(secondText);
 
-		//Label for two pieces of evidence
+		// Label for two pieces of evidence
 		conc = new JLabel("");
 		conc.setBounds(10, 110, 500, 25);
 		panel.add(conc);
 
-		//Label for two pieces of evidence
+		// Label for two pieces of evidence
 		journalText = new JLabel("");
 		journalText.setBounds(10, 240, 500, 25);
 		panel.add(journalText);
 
-		//BUTTONS
+		// BUTTONS
 
-		//Button for Demon
+		// Button for Demon
 		demonButton = new JButton("Demon");
 		demonButton.setBounds(10, 80, 75, 25);
 		panel.add(demonButton);
 		demonButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String first = firstText.getText();
-				String second = secondText.getText();	
+				String second = secondText.getText();
 				first = first.trim();
 				second = second.trim();
 				first = first.toUpperCase();
 				second = second.toUpperCase();
-				demon.checkDemon(first, second);
-				journalText.setText("Evidence left for Demon is " + demon.removeDemon(first, second));
+				demon.checkGhost(first, second);
+				journalText.setText("Evidence left for Demon is " + demon.removeGhost(first, second));
 			}
 		});
 
-		//Button for Banshee
+		// Button for Banshee
 		bansheeButton = new JButton("Banshee");
 		bansheeButton.setBounds(90, 80, 90, 25);
 		panel.add(bansheeButton);
 		bansheeButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String first = firstText.getText();
-				String second = secondText.getText();	
+				String second = secondText.getText();
 				first = first.trim();
 				second = second.trim();
 				first = first.toUpperCase();
 				second = second.toUpperCase();
-				banshee.checkBanshee(first, second);
-				journalText.setText("Evidence left for Banshee is " + banshee.removeBanshee(first, second));
+				banshee.checkGhost(first, second);
+				journalText.setText("Evidence left for Banshee is " + banshee.removeGhost(first, second));
 			}
 		});
 
-		//Button for Goryo
+		// Button for Goryo
 		goryoButton = new JButton("Goryo");
 		goryoButton.setBounds(185, 80, 90, 25);
 		panel.add(goryoButton);
 		goryoButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String first = firstText.getText();
-				String second = secondText.getText();	
+				String second = secondText.getText();
 				first = first.trim();
 				second = second.trim();
 				first = first.toUpperCase();
@@ -187,14 +210,14 @@ public class GUI implements ActionListener {
 			}
 		});
 
-		//Button for Jinn
+		// Button for Jinn
 		jinnButton = new JButton("Jinn");
 		jinnButton.setBounds(280, 80, 75, 25);
 		panel.add(jinnButton);
 		jinnButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String first = firstText.getText();
-				String second = secondText.getText();	
+				String second = secondText.getText();
 				first = first.trim();
 				second = second.trim();
 				first = first.toUpperCase();
@@ -204,14 +227,14 @@ public class GUI implements ActionListener {
 			}
 		});
 
-		//Button for Hantu
+		// Button for Hantu
 		hantuButton = new JButton("Hantu");
 		hantuButton.setBounds(360, 80, 75, 25);
 		panel.add(hantuButton);
 		hantuButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String first = firstText.getText();
-				String second = secondText.getText();	
+				String second = secondText.getText();
 				first = first.trim();
 				second = second.trim();
 				first = first.toUpperCase();
@@ -221,14 +244,14 @@ public class GUI implements ActionListener {
 			}
 		});
 
-		//Button for Phantom
+		// Button for Phantom
 		phantomButton = new JButton("Phantom");
 		phantomButton.setBounds(440, 80, 90, 25);
 		panel.add(phantomButton);
 		phantomButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String first = firstText.getText();
-				String second = secondText.getText();	
+				String second = secondText.getText();
 				first = first.trim();
 				second = second.trim();
 				first = first.toUpperCase();
@@ -238,14 +261,14 @@ public class GUI implements ActionListener {
 			}
 		});
 
-		//Button for Onryo
+		// Button for Onryo
 		onryoButton = new JButton("Onryo");
 		onryoButton.setBounds(10, 120, 75, 25);
 		panel.add(onryoButton);
 		onryoButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String first = firstText.getText();
-				String second = secondText.getText();	
+				String second = secondText.getText();
 				first = first.trim();
 				second = second.trim();
 				first = first.toUpperCase();
@@ -255,14 +278,14 @@ public class GUI implements ActionListener {
 			}
 		});
 
-		//Button for Poltergeist
+		// Button for Poltergeist
 		poltergeistButton = new JButton("Poltergeist");
 		poltergeistButton.setBounds(90, 120, 100, 25);
 		panel.add(poltergeistButton);
 		poltergeistButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String first = firstText.getText();
-				String second = secondText.getText();	
+				String second = secondText.getText();
 				first = first.trim();
 				second = second.trim();
 				first = first.toUpperCase();
@@ -272,14 +295,14 @@ public class GUI implements ActionListener {
 			}
 		});
 
-		//Button for Shade
+		// Button for Shade
 		shadeButton = new JButton("Shade");
 		shadeButton.setBounds(195, 120, 75, 25);
 		panel.add(shadeButton);
 		shadeButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String first = firstText.getText();
-				String second = secondText.getText();	
+				String second = secondText.getText();
 				first = first.trim();
 				second = second.trim();
 				first = first.toUpperCase();
@@ -289,14 +312,14 @@ public class GUI implements ActionListener {
 			}
 		});
 
-		//Button for Spirit
+		// Button for Spirit
 		spiritButton = new JButton("Spirit");
 		spiritButton.setBounds(275, 120, 75, 25);
 		panel.add(spiritButton);
 		spiritButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String first = firstText.getText();
-				String second = secondText.getText();	
+				String second = secondText.getText();
 				first = first.trim();
 				second = second.trim();
 				first = first.toUpperCase();
@@ -306,14 +329,14 @@ public class GUI implements ActionListener {
 			}
 		});
 
-		//Button for The Mimic
+		// Button for The Mimic
 		theMimicButton = new JButton("The Mimic");
 		theMimicButton.setBounds(355, 120, 100, 25);
 		panel.add(theMimicButton);
 		theMimicButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String first = firstText.getText();
-				String second = secondText.getText();	
+				String second = secondText.getText();
 				first = first.trim();
 				second = second.trim();
 				first = first.toUpperCase();
@@ -323,14 +346,14 @@ public class GUI implements ActionListener {
 			}
 		});
 
-		//Button for Yokai
+		// Button for Yokai
 		yokaiButton = new JButton("Yokai");
 		yokaiButton.setBounds(460, 120, 75, 25);
 		panel.add(yokaiButton);
 		yokaiButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String first = firstText.getText();
-				String second = secondText.getText();	
+				String second = secondText.getText();
 				first = first.trim();
 				second = second.trim();
 				first = first.toUpperCase();
@@ -340,14 +363,14 @@ public class GUI implements ActionListener {
 			}
 		});
 
-		//Button for Wraith
+		// Button for Wraith
 		wraithButton = new JButton("Wraith");
 		wraithButton.setBounds(10, 160, 75, 25);
 		panel.add(wraithButton);
 		wraithButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String first = firstText.getText();
-				String second = secondText.getText();	
+				String second = secondText.getText();
 				first = first.trim();
 				second = second.trim();
 				first = first.toUpperCase();
@@ -357,14 +380,14 @@ public class GUI implements ActionListener {
 			}
 		});
 
-		//Button for Yurei
+		// Button for Yurei
 		yureiButton = new JButton("Yurei");
 		yureiButton.setBounds(90, 160, 75, 25);
 		panel.add(yureiButton);
 		yureiButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String first = firstText.getText();
-				String second = secondText.getText();	
+				String second = secondText.getText();
 				first = first.trim();
 				second = second.trim();
 				first = first.toUpperCase();
@@ -374,14 +397,14 @@ public class GUI implements ActionListener {
 			}
 		});
 
-		//Button for Mare
+		// Button for Mare
 		mareButton = new JButton("Mare");
 		mareButton.setBounds(170, 160, 75, 25);
 		panel.add(mareButton);
 		mareButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String first = firstText.getText();
-				String second = secondText.getText();	
+				String second = secondText.getText();
 				first = first.trim();
 				second = second.trim();
 				first = first.toUpperCase();
@@ -391,14 +414,14 @@ public class GUI implements ActionListener {
 			}
 		});
 
-		//Button for Myling
+		// Button for Myling
 		mylingButton = new JButton("Myling");
 		mylingButton.setBounds(250, 160, 75, 25);
 		panel.add(mylingButton);
 		mylingButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String first = firstText.getText();
-				String second = secondText.getText();	
+				String second = secondText.getText();
 				first = first.trim();
 				second = second.trim();
 				first = first.toUpperCase();
@@ -408,14 +431,14 @@ public class GUI implements ActionListener {
 			}
 		});
 
-		//Button for Obake
+		// Button for Obake
 		obakeButton = new JButton("Obake");
 		obakeButton.setBounds(330, 160, 75, 25);
 		panel.add(obakeButton);
 		obakeButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String first = firstText.getText();
-				String second = secondText.getText();	
+				String second = secondText.getText();
 				first = first.trim();
 				second = second.trim();
 				first = first.toUpperCase();
@@ -425,14 +448,14 @@ public class GUI implements ActionListener {
 			}
 		});
 
-		//Button for Oni
+		// Button for Oni
 		oniButton = new JButton("Oni");
 		oniButton.setBounds(410, 160, 75, 25);
 		panel.add(oniButton);
 		oniButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String first = firstText.getText();
-				String second = secondText.getText();	
+				String second = secondText.getText();
 				first = first.trim();
 				second = second.trim();
 				first = first.toUpperCase();
@@ -442,14 +465,14 @@ public class GUI implements ActionListener {
 			}
 		});
 
-		//Button for Raiju
+		// Button for Raiju
 		raijuButton = new JButton("Raiju");
 		raijuButton.setBounds(490, 160, 75, 25);
 		panel.add(raijuButton);
 		raijuButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String first = firstText.getText();
-				String second = secondText.getText();	
+				String second = secondText.getText();
 				first = first.trim();
 				second = second.trim();
 				first = first.toUpperCase();
@@ -459,14 +482,14 @@ public class GUI implements ActionListener {
 			}
 		});
 
-		//Button for Revenant
+		// Button for Revenant
 		revenantButton = new JButton("Revenant");
 		revenantButton.setBounds(10, 200, 100, 25);
 		panel.add(revenantButton);
 		revenantButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String first = firstText.getText();
-				String second = secondText.getText();	
+				String second = secondText.getText();
 				first = first.trim();
 				second = second.trim();
 				first = first.toUpperCase();
@@ -476,14 +499,14 @@ public class GUI implements ActionListener {
 			}
 		});
 
-		//Button for The Twins
+		// Button for The Twins
 		theTwinsButton = new JButton("The Twins");
 		theTwinsButton.setBounds(115, 200, 100, 25);
 		panel.add(theTwinsButton);
 		theTwinsButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String first = firstText.getText();
-				String second = secondText.getText();	
+				String second = secondText.getText();
 				first = first.trim();
 				second = second.trim();
 				first = first.toUpperCase();
@@ -495,7 +518,7 @@ public class GUI implements ActionListener {
 
 		panel.setLayout(null);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frame.setVisible(true); 
+		frame.setVisible(true);
 	}
 
 	@Override
@@ -504,5 +527,3 @@ public class GUI implements ActionListener {
 
 	}
 }
-
-

@@ -18,7 +18,7 @@ public class Jinn implements Ghost {
 		jinn1.add(three);
 	}
 
-	public List<String> removeJinn(String e1, String e2) {
+	public List<String> removeGhost(String e1, String e2) {
 		if (jinn1.contains(e1)) {
 			jinn1.remove(e1);
 		}
@@ -28,7 +28,7 @@ public class Jinn implements Ghost {
 		return jinn1;
 	}
 
-	public boolean checkJinn(String e1, String e2) {
+	public boolean checkGhost(String e1, String e2) {
 		if (e1.equals(one) && (e2.equals(two)) || (e1.equals(two) && e2.equals(three))
 				|| e1.equals(three) && e2.equals(one)) {
 			return true;

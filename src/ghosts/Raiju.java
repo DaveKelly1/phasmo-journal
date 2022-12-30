@@ -18,7 +18,7 @@ public class Raiju implements Ghost {
 		raiju1.add(three);
 	}
 
-	public List<String> removeRaiju(String e1, String e2) {
+	public List<String> removeGhost(String e1, String e2) {
 		if (raiju1.contains(e1)) {
 			raiju1.remove(e1);
 		}
@@ -28,7 +28,7 @@ public class Raiju implements Ghost {
 		return raiju1;
 	}
 
-	public boolean checkRaiju(String e1, String e2) {
+	public boolean checkGhost(String e1, String e2) {
 		if (e1.equals(one) && (e2.equals(two)) || (e1.equals(two) && e2.equals(three))
 				|| e1.equals(three) && e2.equals(one)) {
 			return true;

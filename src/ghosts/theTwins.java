@@ -5,20 +5,20 @@ import java.util.List;
 
 import ghosts.Interface.Ghost;
 
-public class TheTwins implements Ghost {
+public class theTwins implements Ghost {
 	private String one = "EMF LEVEL 5";
 	private String two = "SPIRIT BOX";
 	private String three = "FREEZING TEMPERATURES";
 	private List<String> theTwins1;
 
-	public TheTwins() {
+	public theTwins() {
 		theTwins1 = new ArrayList<String>();
 		theTwins1.add(one);
 		theTwins1.add(two);
 		theTwins1.add(three);
 	}
 
-	public List<String> removeTheTwins(String e1, String e2) {
+	public List<String> removeGhost(String e1, String e2) {
 		if (theTwins1.contains(e1)) {
 			theTwins1.remove(e1);
 		}
@@ -28,7 +28,7 @@ public class TheTwins implements Ghost {
 		return theTwins1;
 	}
 
-	public boolean checkTheTwins(String e1, String e2) {
+	public boolean checkGhost(String e1, String e2) {
 		if (e1.equals(one) && (e2.equals(two)) || (e1.equals(two) && e2.equals(three))
 				|| e1.equals(three) && e2.equals(one)) {
 			return true;

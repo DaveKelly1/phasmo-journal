@@ -18,7 +18,7 @@ public class Poltergeist implements Ghost {
 		poltergeist1.add(three);
 	}
 
-	public List<String> removePoltergeist(String e1, String e2) {
+	public List<String> removeGhost(String e1, String e2) {
 		if (poltergeist1.contains(e1)) {
 			poltergeist1.remove(e1);
 		}
@@ -28,7 +28,7 @@ public class Poltergeist implements Ghost {
 		return poltergeist1;
 	}
 
-	public boolean checkPoltergeist(String e1, String e2) {
+	public boolean checkGhost(String e1, String e2) {
 		if (e1.equals(one) && (e2.equals(two)) || (e1.equals(two) && e2.equals(three))
 				|| e1.equals(three) && e2.equals(one)) {
 			return true;

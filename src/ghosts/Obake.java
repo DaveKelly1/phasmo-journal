@@ -18,7 +18,7 @@ public class Obake implements Ghost {
 		obake1.add(three);
 	}
 
-	public List<String> removeObake(String e1, String e2) {
+	public List<String> removeGhost(String e1, String e2) {
 		if (obake1.contains(e1)) {
 			obake1.remove(e1);
 		}
@@ -28,7 +28,7 @@ public class Obake implements Ghost {
 		return obake1;
 	}
 
-	public boolean checkObake(String e1, String e2) {
+	public boolean checkGhost(String e1, String e2) {
 		if (e1.equals(one) && (e2.equals(two)) || (e1.equals(two) && e2.equals(three))
 				|| e1.equals(three) && e2.equals(one)) {
 			return true;
