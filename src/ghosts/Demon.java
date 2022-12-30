@@ -1,33 +1,36 @@
+package ghosts;
+
 import java.util.ArrayList;
 import java.util.List;
+import ghosts.Interface.Ghost;
 
-public class Demon {
-	private String one = "FINGERPRINTS";
-	private String two = "GHOST WRITING";
-	private String three = "FREEZING TEMPERATURES";
-	private List<String> demon1;
-	
-	public Demon() {		
-		demon1 = new ArrayList<String>();
-		demon1.add(one);
-		demon1.add(two);
-		demon1.add(three);
+public class Demon implements Ghost {
+	private String evidenceOne = "fingerprints";
+	private String evidenceTwo = "ghost writing";
+	private String evidenceThree = "freezing temperatures";
+	private List<String> demon;
+
+	public Demon() {
+		demon = new ArrayList<String>();
+		demon.add(evidenceOne);
+		demon.add(evidenceTwo);
+		demon.add(evidenceThree);
 	}
-	
-		public List<String> removeDemon(String e1, String e2) {
-			if(demon1.contains(e1)) {
-				demon1.remove(e1);
-			}
-			if(demon1.contains(e2)) {
-				demon1.remove(e2);
-			}	
-			return demon1;
+
+	public List<String> removeGhost(String evidenceOne, String evidenceTwo) {
+		if (demon.contains(evidenceOne)) {
+			demon.remove(evidenceOne);
 		}
-		
-		public boolean checkDemon(String e1, String e2){
-			if(e1.equals(one) && (e2.equals(two))||(e1.equals(two)&&e2.equals(three))||e1.equals(three)&&e2.equals(one)) {
-				return true;
-			}
-				return false;
+
+		if (demon.contains(evidenceTwo)) {
+			demon.remove(evidenceTwo);
 		}
+		return demon;
 	}
+
+	public boolean checkGhost(String e1, String e2) {
+		return (e1.equals(evidenceOne) && (e2.equals(evidenceTwo))
+				|| (e1.equals(evidenceTwo) && e2.equals(evidenceThree))
+				|| e1.equals(evidenceThree) && e2.equals(evidenceOne));
+	}
+}
