@@ -1,34 +1,35 @@
+package ghosts;
 import java.util.ArrayList;
 import java.util.List;
+import ghosts.Interface.Ghost;
 
-public class Banshee {
-	private String one = "FINGERPRINTS";
-	private String two = "GHOST ORB";
-	private String three = "DOTS PROJECTOR";
-	private List<String> banshee1;
+class Banshee implements Ghost {
+	private String evidenceOne = "FINGERPRINTS";
+	private String evidenceTwo = "GHOST ORB";
+	private String evidenceThree = "DOTS PROJECTOR";
+	private List<String> banshee;
 	
 	public Banshee() {		
-		banshee1 = new ArrayList<String>();
-		banshee1.add(one);
-		banshee1.add(two);
-		banshee1.add(three);
+		banshee = new ArrayList<String>();
+		banshee.add(evidenceOne);
+		banshee.add(evidenceTwo);
+		banshee.add(evidenceThree);
 	}
 	
-		public List<String> removeBanshee(String e1, String e2) {
-			if(banshee1.contains(e1)) {
-				banshee1.remove(e1);
+		public List<String> removeGhost(String eOne, String eTwo) {
+			
+			if(banshee.contains(eOne)) {
+				banshee.remove(eOne);
 			}
-			if(banshee1.contains(e2)) {
-				banshee1.remove(e2);
+			if(banshee.contains(eTwo)) {
+				banshee.remove(eTwo);
 			}	
-			return banshee1;
+			return banshee;
 		}
 		
-		public boolean checkBanshee(String e1, String e2){
-			if(e1.equals(one) && (e2.equals(two))||(e1.equals(two)&&e2.equals(three))||e1.equals(three)&&e2.equals(one)) {
-			return true;
-		}
-			return false;
+		public boolean checkGhost(String eOne, String eTwo){
+			return(eOne.equals(evidenceOne) && (eTwo.equals(evidenceTwo))||(eOne.equals(evidenceTwo)&&eTwo.equals(evidenceThree))||eOne.equals(evidenceThree)&&eTwo.equals(evidenceOne));
 	}
+
 }
 
