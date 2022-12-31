@@ -33,6 +33,7 @@ import ghosts.TheTwins;
 import ghosts.Wraith;
 import ghosts.Yokai;
 import ghosts.Yurei;
+import ghosts.Buttons.demonButton;
 
 public class GUI implements ActionListener {
 
@@ -44,7 +45,6 @@ public class GUI implements ActionListener {
 
 	private JButton bansheeButton;
 	private JButton goryoButton;
-	private JButton demonButton;
 	private JButton jinnButton;
 	private JButton hantuButton;
 	private JButton phantomButton;
@@ -72,7 +72,6 @@ public class GUI implements ActionListener {
 
 	// GHOSTS
 	private Banshee banshee;
-	private Demon demon;
 	private Goryo goryo;
 	private Jinn jinn;
 	private Hantu hantu;
@@ -92,11 +91,11 @@ public class GUI implements ActionListener {
 	private Raiju raiju;
 	private Revenant revenant;
 	private TheTwins theTwins;
+	private demonButton demonBtn;
 
 	public GUI() {
 
 		banshee = new Banshee();
-		demon = new Demon();
 		goryo = new Goryo();
 		phantom = new Phantom();
 		hantu = new Hantu();
@@ -161,20 +160,15 @@ public class GUI implements ActionListener {
 		// BUTTONS
 
 		// Button for Demon
-		demonButton = new JButton("Demon");
-		demonButton.setBounds(10, 80, 75, 25);
-		panel.add(demonButton);
-		demonButton.addActionListener(new ActionListener() {
+		demonBtn = new demonButton();
+		panel.add(demonBtn.constructBtn());
+		demonBtn.demonButton(firstText, secondText);
+		demonBtn.addActionListener(new ActionListener() {
+
 			public void actionPerformed(ActionEvent e) {
-				String first = firstText.getText();
-				String second = secondText.getText();
-				first = first.trim();
-				second = second.trim();
-				first = first.toUpperCase();
-				second = second.toUpperCase();
-				demon.checkGhost(first, second);
-				journalText.setText("Evidence left for Demon is " + demon.removeGhost(first, second));
+				demonBtn.checkGhost(firstText, secondText);
 			}
+
 		});
 
 		// Button for Banshee
@@ -183,12 +177,8 @@ public class GUI implements ActionListener {
 		panel.add(bansheeButton);
 		bansheeButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				String first = firstText.getText();
-				String second = secondText.getText();
-				first = first.trim();
-				second = second.trim();
-				first = first.toUpperCase();
-				second = second.toUpperCase();
+				String first = firstText.getText().trim().toLowerCase();
+				String second = secondText.getText().trim().toLowerCase();
 				banshee.checkGhost(first, second);
 				journalText.setText("Evidence left for Banshee is " + banshee.removeGhost(first, second));
 			}
